@@ -131,7 +131,7 @@ function App({ client }) {
                 e.stopPropagation();
                 client
                   .getAliases()
-                  .then((res) => setIndices(Object.keys(res)))
+                  .then((res) => setIndices(Object.keys(res).filter(key => !key.startsWith('.'))))
                   .catch(setError);
               }}
             >
