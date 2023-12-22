@@ -25,7 +25,7 @@ export default class Client {
       headers: headers,
       body: body && JSON.stringify(body),
       method: method,
-      mode: 'cors',
+      mode: 'no-cors',
     }).then((res) => res.json());
   }
 
