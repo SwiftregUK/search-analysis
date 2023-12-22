@@ -4,12 +4,25 @@ export default class Client {
   }
 
   fetch(method, path, body) {
-    const url = `${this.url}${path}`;
-    return fetch(url, {
-      headers: {
-        accept: 'application/json',
-        'content-type': 'application/json',
-      },
+    const urlObj = new URL(this.url);
+    const username = urlObj.username;
+    const password = urlObj.password;
+
+    urlObj.username = '';
+    urlObj.password = '';
+    urlObj.pathname = path;
+
+    let headers = {
+      'accept': 'application/json',
+      'content-type': 'application/json',
+    };
+
+    if (username && password) {
+      headers['Authorization'] = `Basic ${btoa(username + ':' + password)}`;
+    }
+
+    return fetch(urlObj.toString(), {
+      headers: headers,
       body: body && JSON.stringify(body),
       method: method,
       mode: 'cors',
