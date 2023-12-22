@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Client from './lib/client';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const client = new Client('http://elastic:password@localhost:9200');
+const client = new Client(localStorage.getItem('host-url') || 'http://elastic:password@localhost:9200');
 root.render(
   <React.StrictMode>
     <App client={client} />

@@ -30,6 +30,7 @@ function createClientUrlChangedHandler(client, setUrl) {
   return (e) => {
     const newValue = processChangeEvent(e);
     client.url = newValue;
+    localStorage.setItem('host-url', newValue);
     setUrl(newValue);
   };
 }
