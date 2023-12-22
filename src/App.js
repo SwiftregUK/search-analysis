@@ -19,7 +19,6 @@ import { FormField } from './elements/TextField';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import './bootstrap.min.css';
 import './App.css';
-import GithubLogo from './elements/github-mark-white.svg';
 
 function processChangeEvent(e) {
   e.preventDefault();
