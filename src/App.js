@@ -101,12 +101,7 @@ function App({ client }) {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand>&#x1F97C; Text Analysis Lab for Elasticsearch</Navbar.Brand>
-          <Navbar.Text>
-            <a href='https://github.com/arturom/search-analysis'>
-              <img src={GithubLogo} height="28px" alt="React Logo" />
-            </a>
-          </Navbar.Text>
+          <Navbar.Brand>Elasticsearch Analysis Tool</Navbar.Brand>
         </Container>
       </Navbar>
       <ToastContainer position="bottom-start" className="m-2">
