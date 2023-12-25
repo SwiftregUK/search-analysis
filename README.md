@@ -2,12 +2,9 @@
 
 A graphical user interface for the [Elasticsearch Analyze API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-analyze.html)
 
-## [Try it out!](https://arturom.github.io/search-analysis)
 See the [Elasticsearch configuration section](#elasticsearch-configuration) below for important setup information
 
 ![Preview](/docs/demo.gif?raw=true)
-
-
 
 ---
 
@@ -53,19 +50,3 @@ http.host: 0.0.0.0
 http.cors.enabled: true
 http.cors.allow-origin: '*'
 ```
----
-
-## Development
-
-The app was initialized with [Create React App](https://github.com/facebook/create-react-app).
-
-It is deployed to Github Pages using [the gh-pages package](https://github.com/tschaub/gh-pages).
-
-## Roadmap
-The custom tab needs the following improvements:
-- Add all tokenizers
-- Allow tokenizer parameter input
-- Add all token filters
-- Allow filter parameter input
-- Allow filters to be inserted in any order
-- Auto-genarate the forms for tokenizer params and filter params from [the Elasticsearch specification](https://github.com/elastic/elasticsearch-specification)
